@@ -26,3 +26,9 @@ jobs:
       - name: Run Automated Tests
         run: dotnet test -c release --no-build
 
+      - name: SonarCloud Scan
+        uses: sonarsource/sonarcloud-github-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.TOKEN_GITHUB }}
+          SONAR_TOKEN: ${{ secrets.TOKEN_SONAR }}
+
