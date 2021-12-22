@@ -24,5 +24,5 @@ jobs:
         run: dotnet build -c release --no-restore
 
       - name: Run Automated Tests
-        run: dotnet test -c --no-build
+        run: dotnet test -c release --no-build
 
